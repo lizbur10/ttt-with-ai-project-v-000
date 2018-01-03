@@ -119,7 +119,7 @@ class Game
     def play
       while !self.over? do
         self.turn
-        # sleep 0.1
+        sleep 0.1
       end
       if self.won?
         puts "Congratulations #{self.winner}!"
