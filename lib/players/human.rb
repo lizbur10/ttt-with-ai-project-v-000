@@ -4,11 +4,7 @@ module Players
     def move(board)
       puts "Enter move"
       input = gets.chomp
-      if !board.valid_move?(input)
-        self.move(board)
-      else
-        player_move = input
-      end
+      !board.valid_move?(input) ? self.move(board) : player_move = input
     end
   end
 end
