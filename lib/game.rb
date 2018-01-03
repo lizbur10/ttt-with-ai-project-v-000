@@ -53,7 +53,7 @@ class Game
           game.play
         elsif how_many == "wargames"
           wins = 0
-          10.times do
+          100.times do
             game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
             result = game.play
             wins += 1 if result
