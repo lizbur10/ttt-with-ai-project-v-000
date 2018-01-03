@@ -124,7 +124,6 @@ class Game
         "win"
       else
         puts "Winner: none".upcase
-        nil
       end
     end
 
