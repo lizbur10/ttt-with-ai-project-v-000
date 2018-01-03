@@ -53,12 +53,14 @@ class Game
           game.play
         elsif how_many.downcase == "wargames"
           wins = 0
+          games = 0
           100.times do
             game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
             result = game.play
             wins += 1 if result
+            games += 1
           end
-          puts; puts "Number of games: 100"
+          puts; puts "Number of games: #{games}"
           puts "Number of wins: #{wins}"
           puts; puts "A strange game.\nThe only winning move is\nnot to play.".upcase
           puts; puts "How about a nice game of chess?".upcase

@@ -118,7 +118,7 @@ module Players
       potential_moves.each do | element |
         temp_board = Board.new
         board.cells.each_with_index { | cell, index | temp_board.cells[index] = cell }
-        temp_board.cells[element.to_i - 1] = current_token 
+        temp_board.cells[element.to_i - 1] = current_token
         check_for_tictac(temp_board)
         if !@tictac_combo[opponent(board)].empty?
           avoid_moves << element
