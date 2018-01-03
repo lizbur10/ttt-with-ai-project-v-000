@@ -51,7 +51,7 @@ class Game
           #launch regular game
           game = Game.new
           game.play
-        elsif how_many == "wargames"
+        elsif how_many.downcase == "wargames"
           wins = 0
           100.times do
             game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
