@@ -3,11 +3,11 @@ module Players
 
     def move(board)
       puts "Enter move"
-      player_move = gets.chomp
-      if !board.valid_move?(player_move)             #Had to change human_player_spec to be able to validate
+      input = gets.chomp
+      if !board.valid_move?(input)
         self.move(board)
       end
-      player_move
+      player_move = input
     end
   end
 end
